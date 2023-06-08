@@ -1,0 +1,22 @@
+---
+# tasks file for satellite_register
+
+- name: "Test if satellite_command is set correctly"
+  ansible.builtin.assert:
+    that:
+      - satellite_command is defined
+      - satellite_command is string
+    quiet: true
+
+- name: "Run subscription-manager clean"
+  become: true
+  ansible.builtin.command: "subscription-manager clean"
+  changed_when: false
+  failed_when: false
+
+- name: "Register host in satellite" # noqa
+  become: true
+  ansible.builtin.shell: "{{ satellite_registration_command }}"
+  register: subscription_status
+  changed_when: false
+  failed_when: false

@@ -1,0 +1,19 @@
+---
+galaxy_info:
+  author: Daniel Gibbs
+  company: none
+  description: A role to register a host on Red Hat Satellite
+  license: MIT
+  min_ansible_version: "2.12"
+  namespace: dgibbs64
+  role_name: satellite_registration
+
+  platforms:
+    - name: EL
+      versions:
+        - all
+
+  galaxy_tags:
+    - satellite
+
+dependencies: []

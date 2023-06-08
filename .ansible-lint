@@ -1,0 +1,7 @@
+---
+exclude_paths:
+  - .github
+
+skip_list:
+  - "403"
+  - command-instead-of-shell

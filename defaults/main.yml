@@ -2,3 +2,4 @@
 # defaults file for satellite_registration
 
 satellite_registration_command:
+satellite_registration_clean: true

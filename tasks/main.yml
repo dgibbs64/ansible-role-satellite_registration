@@ -13,6 +13,7 @@
   ansible.builtin.command: "subscription-manager clean"
   changed_when: false
   failed_when: false
+  when: satellite_registration_clean
 
 - name: "Register host in satellite"  # noqa
   become: true
